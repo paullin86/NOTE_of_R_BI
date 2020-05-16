@@ -31,7 +31,7 @@ twGovExp$county<-enc2utf8(twGovExp$county)
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
+```{r pressure, echo=TRUE}
 library(googleVis)
 # op = options(gvis.plot.tag='chart')
 plot( gvisMotionChart(

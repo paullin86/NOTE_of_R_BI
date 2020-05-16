@@ -398,6 +398,7 @@ twGovExp$county&lt;-enc2utf8(twGovExp$county)</code></pre>
 <div id="including-plots" class="section level2">
 <h2>Including Plots</h2>
 <p>You can also embed plots, for example:</p>
+<pre class="r"><code>library(googleVis)</code></pre>
 <pre><code>## Warning: package &#39;googleVis&#39; was built under R version 3.5.3</code></pre>
 <pre><code>## Creating a generic function for &#39;toJSON&#39; from package &#39;jsonlite&#39; in package &#39;googleVis&#39;</code></pre>
 <pre><code>## 
@@ -415,7 +416,12 @@ twGovExp$county&lt;-enc2utf8(twGovExp$county)</code></pre>
 ## 
 ## To suppress this message use:
 ## suppressPackageStartupMessages(library(googleVis))</code></pre>
-<pre><code>## starting httpd help server ... done</code></pre>
+<pre class="r"><code># op = options(gvis.plot.tag=&#39;chart&#39;)
+plot( gvisMotionChart(
+  twGovExp,&quot;county&quot;,&quot;year&quot;,&quot;經濟發展&quot;,&quot;債務&quot;,&quot;教科文&quot;,&quot;總預算&quot;,
+  options=list(width=&quot;900px&quot;, height=&quot;600px&quot;)) )</code></pre>
+<pre><code>## starting httpd help server ...</code></pre>
+<pre><code>##  done</code></pre>
 <p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
 </div>
 
